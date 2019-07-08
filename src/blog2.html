@@ -85,7 +85,15 @@
             line-height: 50px;
 
         }
-
+        div.sculpture
+		{
+			transition: all ease 1s;
+		}
+		div.sculpture:hover
+		{
+			position:relative;
+			transform: rotate(360deg);
+		}
         #footer {
             background-color: black;
             color: white;
@@ -111,7 +119,7 @@
             background-position: center 0;
         }
         #blog {
-            background:rgba(100,149,237,0.2);
+            background:rgba(240,248,255,0.2);
             font-size:30px;
             margin: 0 auto;
             margin-top:480px;
@@ -128,7 +136,7 @@
     <head>
 
     <body>
-        <div id="webBg" style="background-image:url(galaxyBg2.jpg)">
+        <div id="webBg" style="background-image:url(image/galaxyBg2.jpg)">
 
         </div>
         <div id="header">
@@ -137,19 +145,19 @@
                 <p>
         </div>
         <div style="position:absolute;top:22px;right:1.7%;width:50px;height:50px;border-radius:100%;overflow:hidden;">
-            <img src="chaiSmall.jpg">
+            <img src="image/chaiSmall.jpg">
         </div>
         <!-- src="galaxy.jpg"-->
-        <div
-            style="position:absolute;top:250px;left:50%;width:200px;height:200px;border-radius:100%;overflow:hidden;margin: 0 0 0 -100px">
-            <a href="infomation.html" class="aImg"><img src="chaiMid.jpg"></a>
+        <div style="position:absolute;top:250px;left:50%;width:200px;height:200px;border-radius:100%;overflow:hidden;margin: 0 0 0 -100px" class = "sculpture">
+            <a href="infomation.html" class="aImg"><img src="image/chaiMid.jpg"></a>
         </div>
         <div id="blog">
                 <br>    
-                <p>	终于辛辛苦苦把这个个人主页做完了，期间遇到了各种各样的问题，确实在实际操作过程中和学习过程中的差距还是有点大的，有很多的细节是在学习中没有注意到的，在本篇博客中先将想到的一些遇到过的问题记录下来，并且写出我自己的解决方案。</p>
-                <p>问题最大的也是自始至终都在困扰着我的问题是页面的布局问题。使用像素定位的时候，页面缩小或者换一个高分辨率的显示器都会发现一个问题，比如我希望在我的主页上将一个大头像放在背景的透明区域和不透明区域的交界处，这是一个固定的高度，因为如果随着页面背景随着窗口大小变化的话，这张图显示出来的实际效果会非常别扭。解决的方案是使用百分比定位和像素定位相结合，也就是在高度定位上使用像素值绝对定位，在水平定位上使用百分比定位，在使用margin来达到偏置，也就是将图片放到中心，最后就可以使这个头像始终位于交界处的正中央。</p>
-                <p>然后就是页面的缩放问题，网页如果要做到应用广泛就不可避免的遇到缩放的问题。但是如果完全按照电脑网页的尺寸进行缩放，那么当宽度非常小的时候，很多东西就显示的很奇怪，比如一长串文字，每一行只有几个字。这就非常不美观。解决的方法是在上一些元素跟着网页窗口变化的同时还要设置最小的宽度和最小的高度，让图片和文字不至于显示的很奇怪，背景之类的就保持不动，看起来就比较协调。</p>
-                <p>目前就想到这些，之后有新的问题会继续补充。</p>
+                <p>	这篇文档用于记录在第二次基础作业中遇到的一些问题和想到的解决方案。</p>
+                <p>首先是第一题，ddl问题，js的功能非常强大，我们可以先使用正则表达式，将这个日期的格式换成Data可以接受的模式。当然，到写完之后才发现，题目中给的格式好像是Data可以接受的模式。然后我们可以使用Data的函数算出两个时间相差的秒数。之后我们可以判断，如果是小于等于0，那么就意味着在ddl之前完成作业，也就是迟交0天。否则将秒数除86400然后向下取整再加一，连实交日期一起存入数组，最后返回。</p>
+                <p>第二题是费心思最多的一道题，这里要使用yield，最初将迭代器iterator想象成一个指针，首先建立数据结构，然后不断返回当前节点的数值，之后将指针指向下一个节点。但是实际上在先序遍历的过程中，我们不需要首先建立一个完整的数据结构，我们可以每次在构造函数中定义一个生成器函数，并且在这个函数中实现递归，然后每一次返回当前节点所存储的值，最后就可以完成遍历。</p>
+                <p>第三题就非常简单了，对于每一个元素，判断是不是数字，数字就实现函数，数组就递归的遍历这个数组，最终完成。</p>
+                <p>第四题的中心问题在于，使用正则表达式匹配每个原子算式（两个操作数和一个操作符），判断完给定的计算模式，然后对于每个原子算式进行计算，计算后对括号中不含计算符的实行去括号操作，然后判断expression是不是已经可以换成一个数字了，如果可以那么跳出。</p>
         </div>
     </body>
 

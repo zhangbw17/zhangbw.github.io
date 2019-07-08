@@ -27,15 +27,13 @@
 			color: white;
 			text-decoration: none;
 		}
+
 		a.aImg:hover {
 			filter: alpha(Opacity=80);
 			-moz-opacity: 0.8;
 			opacity: 0.8;
 		}
-		div.aDiv:hover {
-			background: rgba(175,238,238,0.5);
-			
-		}
+
 		#header {
 			background-color: black;
 			color: gray;
@@ -50,17 +48,42 @@
 			height: 900px;
 			width: 100px;
 			float: left;
-			padding: 5px;
+		padding: 5px;
 		}
 
-		#section {
+		#section1 {
+			position: absolute;
+			top: 345px;
+			background-color: transparent;
+			width: 50%;
+			height: 100px;
+			float: left;
+			padding: 10px;
+			margin: 0% 25% 0%;
+			font-size: 179%;
+			min-width: 500px;
+			zoom: 1;
+			word-wrap: break-word;
+			word-break: break-all;
+			line-height: 50px;
+		}
+
+		#section2 {
+			position: absolute;
+			top: 450px;
 			background-color: transparent;
 			width: 50%;
 			height: 400px;
 			float: left;
-			padding: 10px;
-			margin: 15% 25% 0%;
+			padding: 0px 0px 0px 50px;
+			margin: 0% 25% 0%;
 			font-size: 179%;
+			min-width: 500px;
+			zoom: 1;
+			word-wrap: break-word;
+			word-break: break-all;
+			line-height: 50px;
+
 		}
 
 		#footer {
@@ -87,22 +110,6 @@
 			-o-background-size: cover;
 			background-position: center 0;
 		}
-		#journalLeft{
-			width: 400px;
-			height: 260px;
-			position:absolute;
-			top:345px;
-			left:50%;
-			margin-left:-400px;
-			
-		}
-		#journalRight{
-			width: 400px;
-			height: 260px;
-			position:absolute;
-			top:345px;
-			left:50%;
-		}
 		div.sculpture
 		{
 			transition: all ease 1s;
@@ -128,29 +135,26 @@
 	<head>
 
 	<body>
-		<div id="webBg" style="background-image:url(galaxyBg1.jpg)">
+		<div id="webBg" style="background-image:url(image/galaxyBg2.jpg)">
 
 		</div>
 		<div id="header">
 			<p>
 				<pre><a href="main.html" class="a1"><b>  Zhangbw 的主页</b></a> | <a href="infomation.html" class="a1"><b>个人信息</b></a> | <a href="journal.html" class="a1"><b>个人日志</b></a></pre>
-				<p>
+			<p>
 		</div>
-		<div style="position:absolute;top:1.8%;right:1.7%;width:50px;height:50px;border-radius:100%;overflow:hidden;" class="sculpture">
-			<img src="chaiSmall.jpg">
+		<div style="position:absolute;top:22px;right:1.7%;width:50px;height:50px;border-radius:100%;overflow:hidden;" class="sculpture">
+			<img src="image/chaiSmall.jpg">
 		</div>
 		<!-- src="galaxy.jpg"-->
-		<div id ="journalLeft">
-			<a href="blog1.html" class="aImg"><img src="tree.jpg" style="width: 400px; height:260px"></a>
+		<div
+			style="position:absolute;top:250px;left:50%;width:200px;height:200px;border-radius:100%;overflow:hidden;margin: 0 0 0 -100px" class="sculptureMid">
+			<a href="infomation.html" class="aImg"><img src="image/chaiMid.jpg"></a>
 		</div>
-		<div id ="journalRight" 
-			 style="word-wrap: break-word;word-break: break-all;padding-left: 2em;padding-right: 2em" 
-			 onclick="window.location.href='blog1.html'" 
-			 class="aDiv">
-			<pre style="font-size: 30px"><b><br>第一篇博客</b></pre>
-			<p style="font-size:20px">绞尽脑汁做出来的个人主页终于完工了，写这一篇博客用来记录在写自己的网页中遇到的问题和解决方案。希望对大家有帮助。</p>
+		<div
+			style="background-color:transparent;position:absolute;left:50%;top:500px;width:600px;height:300px;margin: 0 0 0 -300px;text-align:center;">
+			<img src="image/THSS.png">
 		</div>
 	</body>
-
 
 </html>
